@@ -1,0 +1,1 @@
+I wanted to let you know that I didn’t have as much time to complete the project as I had hoped, due to my end-term examination schedule. At this point, it’s just the UI, without any feature implementations.

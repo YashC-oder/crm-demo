@@ -1,0 +1,25 @@
+.button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    padding: 12px;
+    overflow: visible; 
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 4px var(--color-shadow);
+}
+
+
+.label {
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}

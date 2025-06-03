@@ -1,0 +1,148 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding:10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card styling */
+.card {
+  background-color: var(--color-surface);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px var(--color-shadow);
+  border: 1px solid var(--color-border);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-heading);
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Insights section */
+.insights {
+  background: var(--gradient-primary);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  color: var(--text-heading);
+}
+
+.insightsHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.insightsTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.insightsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .insightsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.insightsCard {
+  background-color: var(--color-surface);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.insightsCardTitle {
+  font-weight: 500;
+  color: var(--text-heading);
+  margin-bottom: 0.5rem;
+}
+
+.insightsCardText {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* Recent campaigns section */
+.recent {
+  background-color: var(--color-surface);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px var(--color-shadow);
+  border: 1px solid var(--color-border);
+}
+
+.recentHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.recentHeaderTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.recentBody {
+  padding: 1.5rem;
+}
+
+.recentItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.recentItemTitle {
+  font-weight: 500;
+  color: var(--text-heading);
+}
+
+.recentItemText {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.recentItemValue {
+  text-align: right;
+}

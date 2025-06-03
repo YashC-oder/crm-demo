@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Dancing+Script:wght@400..700&family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  font-family: "Inter", Arial, sans-serif;
+
+  /* Core Colors */
+  --color-primary: #4B0082;
+  --color-secondary: #8A2BE2;
+  --color-tertiary: #D8BFD8;
+  --color-surface: #1B1B2F;
+  --color-text: #EDEDED;
+  --color-accent: #FFD700;
+  --color-border: #6A5ACD;
+  --color-red: #FF4F64;
+  --color-red-dark: #CC3B4F;
+  --color-green: #32CD32;
+
+  --color-primary-light: #9370DB;    
+  --color-primary-dark: #2E0854;     
+  --color-secondary-light: #BA55D3;  
+  --color-secondary-dark: #6A0DAD;   
+
+  /* Complementary Backgrounds and Highlights */
+  --color-surface-light: #2E2E3E;   
+  --color-surface-muted: #3A3A5C;    
+  --color-highlight: #DA70D6;        
+  --color-shadow: rgba(138, 43, 226, 0.3);
+
+  /* Optional Neutrals */
+  --color-neutral: #CCCCCC;
+  --color-neutral-dark: #999999;
+
+  /* Gradients */
+  --color-gradient: linear-gradient(45deg, #4B0082, #8A2BE2, #BA55D3);
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  --gradient-accent: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
+
+  /* Text Contrast */
+  --text-heading: #FFFFFF;
+  --text-muted: #BBBBBB;
+  --text-disabled: #666666;
+
+  /* States */
+  --state-hover: rgba(255, 255, 255, 0.1);
+  --state-active: rgba(255, 255, 255, 0.2);
+  --state-disabled: rgba(255, 255, 255, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+

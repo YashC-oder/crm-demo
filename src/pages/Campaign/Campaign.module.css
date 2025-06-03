@@ -1,0 +1,266 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.newCampaignBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-primary);
+  color: var(--text-heading);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 10px var(--color-primary-light);
+}
+
+.newCampaignBtn:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 0 15px var(--color-primary-dark);
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: var(--color-accent);
+}
+
+.campaignList {
+  background-color: var(--color-surface-light);
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px var(--color-shadow);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.listHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listTitle {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--color-accent);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.searchWrapper {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  color: var(--color-neutral-dark);
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+}
+
+.searchInput {
+  padding-left: 2rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  outline-offset: 2px;
+  background-color: var(--color-surface-muted);
+  color: var(--color-text);
+}
+
+.searchInput::placeholder {
+  color: var(--color-neutral);
+}
+
+.searchInput:focus {
+  border-color: var(--color-secondary-light);
+  box-shadow: 0 0 0 2px var(--state-active);
+  background-color: var(--color-surface-light);
+}
+
+.filterBtn {
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.filterBtn:hover {
+  background-color: var(--state-hover);
+}
+
+.filterIcon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-neutral-dark);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.table thead tr {
+  background-color: var(--color-surface-muted);
+}
+
+.table th,
+.table td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-neutral);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table tbody tr:hover {
+  background-color: var(--state-hover);
+}
+
+.tableRow td {
+  font-weight: 400;
+  color: var(--color-text);
+  text-transform: none;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.campaignName {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.audience {
+  color: var(--color-neutral);
+}
+
+.size {
+  color: var(--color-text);
+}
+
+.sent {
+  font-weight: 600;
+  color: var(--color-green);
+}
+
+.failed {
+  font-weight: 600;
+  color: var(--color-red);
+}
+
+.date {
+  color: var(--color-neutral);
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  background-color: var(--color-green);
+  color: var(--color-surface);
+  text-transform: capitalize;
+}
+
+.performanceInsights {
+  background: var(--gradient-primary);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-primary-light);
+  color: var(--text-heading);
+}
+
+.performanceHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.performanceIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-accent);
+}
+
+.performanceTitle {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--text-heading);
+}
+
+.performanceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .performanceGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.performanceCard {
+  background-color: var(--color-surface-light);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 1px 2px var(--color-shadow);
+  color: var(--text-heading);
+}
+
+.performanceCard h4 {
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.performanceCard p {
+  color: var(--color-neutral);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}

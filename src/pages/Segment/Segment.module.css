@@ -1,0 +1,468 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding:10px;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: var(--color-text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.createButton {
+  background: var(--color-primary);
+  color: var(--text-heading);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.createButton:hover {
+  background: var(--color-primary-dark);
+}
+
+.iconSmall {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(27, 27, 47, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 50;
+}
+
+.modal {
+  background: var(--color-surface);
+  border-radius: 1rem;
+  max-width: 64rem;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 0 20px var(--color-shadow);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+}
+
+.modalHeader {
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.modalHeader h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.modalBody {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.aiInputSection {
+  background: linear-gradient(90deg, var(--color-tertiary), var(--color-secondary));
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  color: var(--color-primary-dark);
+}
+
+.aiHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.iconPurple {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-primary);
+}
+
+.aiInputRow {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.aiInput {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  box-shadow: inset 0 0 4px var(--color-border);
+}
+
+.aiInput::placeholder {
+  color: var(--color-primary-dark);
+  font-weight: 500;
+}
+
+.aiButton {
+  background: var(--color-primary);
+  color: var(--text-heading);
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+.aiButton:hover {
+  background: var(--color-primary-dark);
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: var(--text-heading);
+}
+
+.textInput,
+.ruleValueInput,
+.textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--color-surface-light);
+  color: var(--color-text);
+  outline: none;
+  box-shadow: inset 0 0 4px var(--color-border);
+  resize: vertical;
+}
+
+.textInput::placeholder,
+.ruleValueInput::placeholder,
+.textarea::placeholder {
+  color: var(--color-neutral);
+}
+
+.rulesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ruleRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.selectLogic,
+.selectField,
+.selectOperator {
+  background: var(--color-surface-light);
+  border-radius: 1rem;
+  border: none;
+  padding: 0.3rem 0.75rem;
+  color: var(--color-text);
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 4.5rem;
+}
+
+.selectLogic {
+  max-width: 4.5rem;
+}
+
+.selectField {
+  min-width: 7rem;
+}
+
+.selectOperator {
+  min-width: 6rem;
+}
+
+.removeRuleBtn {
+  background: var(--color-red);
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-weight: 700;
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.removeRuleBtn:hover {
+  background: var(--color-red-dark);
+}
+
+.addRuleBtn {
+  background: var(--color-secondary);
+  color: var(--text-heading);
+  padding: 0.3rem 0.75rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s ease;
+}
+
+.addRuleBtn:hover {
+  background: var(--color-secondary-dark);
+}
+
+.audiencePreview {
+  background: var(--color-surface-muted);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+}
+
+.audienceHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary-light);
+  font-weight: 700;
+}
+
+.iconBlue {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-primary-light);
+}
+
+.audienceList {
+  max-height: 8rem;
+  overflow-y: auto;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.audienceItem {
+  padding: 0.2rem 0;
+}
+
+.audienceMore {
+  color: var(--color-neutral);
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.messageButtons {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.messageBtn {
+  background: var(--color-primary-light);
+  border-radius: 1rem;
+  padding: 0.3rem 1rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.messageBtn:hover {
+  background: var(--color-primary-dark);
+}
+
+.aiSuggestions {
+  margin-bottom: 0.5rem;
+}
+
+.suggestionsLabel {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--color-accent);
+}
+
+.suggestionBtn {
+  background: var(--color-secondary);
+  color: var(--text-heading);
+  border-radius: 1rem;
+  padding: 0.3rem 0.75rem;
+  margin: 0.2rem 0.25rem 0 0;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+}
+
+.suggestionBtn:hover {
+  background: var(--color-secondary-dark);
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface-light);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.cancelBtn {
+  background: transparent;
+  color: var(--color-text);
+  font-weight: 600;
+  border: 2px solid var(--color-neutral);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cancelBtn:hover {
+  background: var(--color-neutral);
+  color: var(--color-surface);
+}
+
+.sendBtn {
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sendBtn:disabled {
+  background: var(--state-disabled);
+  color: var(--color-neutral-dark);
+  cursor: not-allowed;
+}
+
+.sendBtn:not(:disabled):hover {
+  background: #f0c419;
+}
+
+.segmentCard {
+  background-color: var(--color-surface-light);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px var(--color-shadow);
+  color: var(--text-heading);
+  border: 1px solid var(--color-border);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.segmentCard:hover {
+  box-shadow: 0 4px 8px var(--color-shadow);
+  border-color: var(--color-secondary);
+}
+
+.segmentCard h3 {
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.segmentCard p {
+  color: var(--color-neutral);
+  font-size: 0.875rem;
+  line-height: 1.3;
+}
+
+
+.segmentTitle {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-heading);
+}
+
+.segmentDesc {
+  color: var(--color-neutral);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.segmentFooter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.segmentCount {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  min-width: 3rem;
+  text-align: center;
+  color: var(--text-heading);
+}
+
+.highValueCount {
+  background: var(--color-primary);
+}
+
+.inactiveCount {
+  background: var(--color-red);
+}
+
+.frequentCount {
+  background: var(--color-green);
+}
+
+.segmentIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--color-neutral);
+}
+
+.predefinedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1.5rem;
+}

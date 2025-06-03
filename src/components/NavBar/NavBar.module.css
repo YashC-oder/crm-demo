@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:4px;
+  gap: 1.5rem;
+  background-color: var(--color-surface);
+}
+
+.tabButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: var(--color-neutral-dark);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.tabButton:hover {
+  color: var(--color-text);
+  background-color: var(--state-hover);
+}
+
+.active {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: inherit;
+}
